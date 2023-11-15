@@ -1,8 +1,20 @@
 # Changelog
 
+## v0.8.4
+
+- small performance improvement by adding `min_binding_size` to the matrix BindGroup
+- `wgpu` crate version -> v0.17.1
+- other crates versions updates
+
 ## v0.8.3
 
-- `wgpu` crate version -> v0.16.2
+- `wgpu` crate version -> v0.17.0
+
+- `draw()` function no longer needs `self` to be mutable - by @PPakalns in [#18](https://github.com/Blatko1/wgpu-text/pull/18).
+
+- removed redundant `mut` from functions `update_matrix()` and `resize_view()`
+  
+- `BrushError` is now public
 
 ## v0.8.2
 
