@@ -33,22 +33,22 @@ fn vs_main(in: VertexInput) -> VertexOutput {
     switch (in.vertex_index) {
         case 0u: {
             pos = vec2<f32>(left, top);
-            out.tex_pos = in.tex_top_left;
+            out.tex_pos = vec2<f32>(in.tex_top_left.x, in.tex_bottom_right.y);
             break;
         }
         case 1u: {
             pos = vec2<f32>(right, top);
-            out.tex_pos = vec2<f32>(in.tex_bottom_right.x, in.tex_top_left.y);
+            out.tex_pos = in.tex_bottom_right;
             break;
         }
         case 2u: {
             pos = vec2<f32>(left, bottom);
-            out.tex_pos = vec2<f32>(in.tex_top_left.x, in.tex_bottom_right.y);
+            out.tex_pos = in.tex_top_left;
             break;
         }
         case 3u: {
             pos = vec2<f32>(right, bottom);
-            out.tex_pos = in.tex_bottom_right;
+            out.tex_pos = vec2<f32>(in.tex_bottom_right.x, in.tex_top_left.y);
             break;
         }
         default: {}
